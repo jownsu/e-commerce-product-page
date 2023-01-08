@@ -1,0 +1,23 @@
+@import "../../../assets/sass/variables";
+
+.quantity {
+    align-items: center;
+    background: $color-grey-light;
+    border-radius: 10px;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 1.5rem;
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        height: 3rem;
+        width: 3rem;
+    }
+    
+    span { 
+        font-weight: bold;
+    }
+}

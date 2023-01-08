@@ -1,0 +1,50 @@
+@import "../../assets/sass/variables";
+
+.nav {
+    align-items: center;
+    border-bottom: 1px solid $color-grey-light;
+    display: flex;
+    gap: 4rem;
+    padding: 3rem 0;
+
+    &_title {
+        font-size: 3.4rem;
+        font-weight: 700;
+    }
+
+    &_links {
+        display: flex;
+        gap: 3rem;
+
+        a {
+            color: $color-grey;
+        }
+    }
+
+    &_side {
+        display: flex;
+        gap: 4rem;
+        margin-left: auto;
+    }
+
+    &_cart {
+
+    }
+
+    &_user {
+        border-radius: 50%;
+        height: 5rem;
+        width: 5rem;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}

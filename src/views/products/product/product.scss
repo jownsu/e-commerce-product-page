@@ -1,0 +1,56 @@
+@import "../../../assets/sass/variables";
+
+.product {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .product_main {
+        border-radius: 2rem;    
+        cursor: pointer;
+        margin-bottom: 2rem;
+        max-width: 50rem;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .product_sub {
+        cursor: pointer;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+
+        &-img {
+            border-radius: 1rem;
+            flex: 1;
+            max-width: 10rem;
+            overflow: hidden;
+
+            &.active {
+                border: 3px solid $color-primary;
+                
+                img {
+                    opacity: .3;
+                }
+            }
+
+            &:hover {
+
+                img {
+                    opacity: .7;
+                }
+            }
+        }
+        
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+}
