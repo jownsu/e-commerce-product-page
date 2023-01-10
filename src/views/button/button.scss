@@ -4,11 +4,14 @@
     background: $color-primary;
     border-radius: 1.2rem;
     border: none;
-    box-shadow: 0 10px 40px rgba($color-primary, .5);
     color: $color-white;
     cursor: pointer;
     font-family: inherit;
     font-size: inherit;
     font-weight: bold;
     padding: 1rem 2rem;
+
+    &:hover {
+        opacity: .5;
+    }
 }

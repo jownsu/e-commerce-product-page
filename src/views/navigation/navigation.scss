@@ -23,18 +23,27 @@
 
     &_side {
         display: flex;
+        align-items: center;
         gap: 4rem;
         margin-left: auto;
     }
 
     &_cart {
+        position: relative;
+    }
 
+    &_btn_cart {
+        border: none;
+        background: none;
+        cursor: pointer;
     }
 
     &_user {
         border-radius: 50%;
-        height: 5rem;
-        width: 5rem;
+        border: 3px solid $color-primary;
+        height: 6rem;
+        width: 6rem;
+        cursor: pointer;
 
         img {
             height: 100%;
@@ -42,9 +51,4 @@
         }
     }
 
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
 }
