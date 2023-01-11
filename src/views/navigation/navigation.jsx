@@ -21,9 +21,10 @@ const Navigation = () => {
                 <li><a href="/">Contact</a></li>
             </ul>
             <div className="nav_side">
-                <div className="nav_cart" onClick={onCartClick}>
-                    <button className="nav_btn_cart">
+                <div className="nav_cart">
+                    <button className="nav_btn_cart" onClick={onCartClick}>
                         <img src={CartIcon} alt="cart icon" />
+                        <span>1</span>
                     </button>
                     { showCart && <Cart /> }
                 </div>

@@ -1,51 +1,51 @@
 @import "../../assets/sass/variables";
 
 .cart {
-    position: absolute;
-    width: 35rem;
-    height: 25rem;
-    bottom: -3rem;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, 100%);
-    border-radius: 1rem;
     background: $color-white;
+    border-radius: 1rem;
+    bottom: -3rem;
     box-shadow: 0 4px 16px rgba(#000, .2);
-    font-family: $font-primary;
     display: flex;
     flex-direction: column;
+    font-family: $font-primary;
+    height: 25rem;
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    transform: translate(-50%, 100%);
+    width: 35rem;
 
     h3 {
+        border-bottom: 2px solid $color-grey-light;
         font-size: 1.8rem;
         padding: 2rem;
-        border-bottom: 2px solid $color-grey-light;
         text-align: left;
     }
 
     &_main {
-        flex: 1;
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
         flex-direction: column;
+        flex: 1;
         gap: 2rem;
+        justify-content: center;
+        padding: 2rem;
     }
 
     &_empty {
+        color: $color-grey;
         font-size: 1.6rem;
         font-weight: bold;
-        color: $color-grey;
     }
 
     &_list {
     }
 
     &_item {
-        display: flex;
-        border-radius: 1rem;
-        gap: 1rem;
         align-items: center;
+        border-radius: 1rem;
+        display: flex;
+        gap: 1rem;
 
         > img {
             border-radius: 1rem;
@@ -55,8 +55,8 @@
     }
 
     &_item_name {
-        font-family: $font-primary;
         color: $color-grey;
+        font-family: $font-primary;
         font-size: 1.6rem;
         margin-bottom: .5rem;
     }
@@ -74,20 +74,20 @@
     &_delete {
         background: none;
         border: none;
-        width: 2rem;
-        height: auto;
         cursor: pointer;
+        height: auto;
+        width: 2rem;
 
         img {
             border-radius: none;
-            width: 100%;
             height: 100%;
+            width: 100%;
         }
     }
 
     button.cart_checkout {
-        width: 100%;
         font-size: 1.8rem;
         padding: 1.5rem 0;
+        width: 100%;
     }
 }

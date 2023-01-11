@@ -1,0 +1,13 @@
+@import "../../../assets/sass/variables";
+
+.product_modal {
+    align-items: center;
+    background: rgba(#000, .5);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
