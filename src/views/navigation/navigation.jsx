@@ -1,19 +1,34 @@
 import { useState } from "react";
 import Cart from "../cart/cart";
 import CartIcon from "../../assets/images/icon-cart.svg";
+import MenuIcon from "../../assets/images/icon-menu.svg";
+import CloseIcon from "../../assets/images/icon-close.svg";
 import "./navigation.scss";
 
 const Navigation = () => {
     const [showCart, setShowCart] = useState(false);
+    const [activeNavLink, setActiveNavLink] = useState(false);
 
     const onCartClick = () => {
         setShowCart(prevState => !prevState);
     }
 
+    const onMenuClick = () => {
+        setActiveNavLink(true);
+    }
+
+    const onCloseClick = () => {
+        setActiveNavLink(false);
+    }
+
     return (
         <nav className="nav">
             <a href="/" className="nav_title">sneakers</a>
-            <ul className="nav_links">
+            <button className="nav_menu" onClick={onMenuClick}><img src={MenuIcon} alt="menu-icon" /></button>
+            <ul className={`nav_links ${activeNavLink ? "active" : ""}`}>
+                <li className="nav_close">
+                    <button onClick={onCloseClick}><img src={CloseIcon} alt="close icon" /></button>
+                </li>
                 <li><a href="/">Collections</a></li>
                 <li><a href="/">Men</a></li>
                 <li><a href="/">Women</a></li>
@@ -32,6 +47,7 @@ const Navigation = () => {
                     <img src={require("../../assets/images/image-avatar.png")} alt="avatar" />
                 </button>
             </div>
+            <div className={`nav_backdrop ${activeNavLink ? "active" : ""}`} onClick={onCloseClick}></div>
         </nav>
     )
 }
