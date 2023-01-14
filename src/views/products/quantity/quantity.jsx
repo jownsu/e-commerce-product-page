@@ -1,27 +1,9 @@
-import { useState } from "react";
 import MinusIcon from "../../../assets/images/icon-minus.svg";
 import PlusIcon from "../../../assets/images/icon-plus.svg";
 import "./quantity.scss";
 
 
-const Quantity = () => {
-
-    const [quantity, setQuantity] = useState(1);
-
-    const onPlusClick = () => {
-        setQuantity(prevQuantity => prevQuantity + 1);
-    }
-
-    const onMinusClick = () => {
-        setQuantity(prevQuantity => {
-            if(prevQuantity > 1){
-                return prevQuantity - 1
-            }
-
-            return prevQuantity;
-        });
-    }
-
+const Quantity = ({ onPlusClick, onMinusClick, quantity = 0 }) => {
 
     return (
         <div className="quantity">

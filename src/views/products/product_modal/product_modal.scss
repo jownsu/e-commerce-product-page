@@ -10,4 +10,114 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 999;
+    
+    .product {
+
+        @media only screen and (max-width: $bp-mobile) {
+            padding: 1rem;
+        }
+
+        &_prev,
+        &_next,
+        &_close {
+            align-items: center;
+            background: $color-white;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            height: 5rem;
+            justify-content: center;
+            padding: 1.8rem;
+            position: absolute;
+            width: 5rem;
+            z-index: 10;
+
+            @media only screen and (max-width: $bp-mobile) {
+                height: 3rem;
+                padding: 1rem;
+                width: 3rem;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        
+        &_prev {
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            @media only screen and (max-width: $bp-mobile) {
+                transform: translate(30%, -50%);
+            }
+        }  
+        
+        &_next {
+            right: 0;
+            top: 50%;
+            transform: translate(50%, -50%);
+
+            @media only screen and (max-width: $bp-mobile) {
+                transform: translate(-30%, -50%);
+            }
+        }
+        
+        &_close {
+            background: none;
+            height: 5rem;
+            position: absolute;
+            right: -1rem;
+            top: -5rem;
+            width: 5rem;
+        }
+
+        &_main {
+            @media only screen and (max-width: $bp-mobile) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .product_sub_modal {
+        cursor: pointer;
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-mobile) {
+            gap: 1rem;
+        }
+
+        &-img {
+            background: #fff;
+            border-radius: 1rem;
+            flex: 1;
+            max-width: 10rem;
+            overflow: hidden;
+
+            &.active {
+                border: 3px solid $color-primary;
+                
+                img {
+                    opacity: .3;
+                }
+            }
+
+            &:hover {
+
+                img {
+                    opacity: .7;
+                }
+            }
+        }
+        
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
 }

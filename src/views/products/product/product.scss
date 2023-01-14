@@ -16,6 +16,10 @@
             border-radius: 2rem;    
             height: 100%;
             width: 100%;
+
+            @media only screen and (max-width: $bp-mobile) {
+                border-radius: 0;
+            }
         }
     }
 
@@ -24,6 +28,10 @@
         display: flex;
         gap: 3rem;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-mobile) {
+            display: none;
+        }
 
         &-img {
             background: #fff;
@@ -62,24 +70,27 @@
         border-radius: 50%;
         border: none;
         cursor: pointer;
-        display: flex;
-        height: 5rem;
+        display: none;
+        height: 4rem;
         justify-content: center;
         position: absolute;
-        width: 5rem;
-        z-index: 10;
+        width: 4rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            display: flex;
+        }
     }
 
     &_prev {
         left: 0;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(25%, -50%);
     }  
     
     &_next {
         right: 0;
         top: 50%;
-        transform: translate(50%, -50%);
+        transform: translate(-25%, -50%);
     }
 
     &_close {

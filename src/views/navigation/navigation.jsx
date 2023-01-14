@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import CartContext from "../../context/cart_context";
 import Cart from "../cart/cart";
 import CartIcon from "../../assets/images/icon-cart.svg";
 import MenuIcon from "../../assets/images/icon-menu.svg";
@@ -6,6 +7,7 @@ import CloseIcon from "../../assets/images/icon-close.svg";
 import "./navigation.scss";
 
 const Navigation = () => {
+    const { products } = useContext(CartContext);
     const [showCart, setShowCart] = useState(false);
     const [activeNavLink, setActiveNavLink] = useState(false);
 
@@ -39,7 +41,11 @@ const Navigation = () => {
                 <div className="nav_cart">
                     <button className="nav_btn_cart" onClick={onCartClick}>
                         <img src={CartIcon} alt="cart icon" />
-                        <span>1</span>
+                        { 
+                            products.length > 0
+                            ? <span>{products.reduce((total, product) => total + product.quantity, 0)}</span>
+                            : null
+                        }
                     </button>
                     { showCart && <Cart /> }
                 </div>

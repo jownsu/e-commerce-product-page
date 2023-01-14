@@ -2,6 +2,10 @@
 
 .product_info {
 
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 0 2rem;
+    }
+
     h4 {
         color: $color-primary;
         letter-spacing: 3px;
@@ -12,6 +16,10 @@
     h3 {
         font-size: 4.5rem;
         margin-bottom: 3rem;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 3.3rem;
+        }
     }
 
     &_desc {
@@ -29,6 +37,10 @@
         gap: 1.6rem;
         margin-bottom: 1rem;
 
+        @media only screen and (max-width: $bp-smallest) {
+            margin-bottom: 0;
+        }
+
         span {
             background: $color-primary-light;
             border-radius: .6rem;
@@ -42,11 +54,28 @@
         color: $color-grey;
         margin-bottom: 4rem;
         text-decoration: line-through;
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-bottom: 0;
+            margin-left: auto;
+        }
+    }
+
+    &_price_container {
+        @media only screen and (max-width: $bp-smallest) {
+            align-items: center;
+            display: flex;
+            margin-bottom: 3rem;
+        }
     }
 
     &_btns {
         display: flex;
         gap: 2rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            flex-direction: column;
+        }
 
         > .quantity {
             flex: 1;
@@ -54,6 +83,9 @@
 
         > button {
             flex: 2;
+            @media only screen and (max-width: $bp-smallest) {
+                padding: 2rem;
+            }
         }
     }
 }

@@ -42,11 +42,18 @@ ul {
     gap: 10rem;
     padding: 9rem;
 
-    > div {
-        flex: 1;
-    }
-
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 5rem;
+    }
+    @media only screen and (max-width: $bp-mobile) {
+        padding: 0 0 3rem 0;
+        gap: 1rem;
+    }
+
+    > div {
+        flex: 1;
     }
 }
